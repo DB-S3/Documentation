@@ -41,7 +41,8 @@ C3:
 To test my application i will be using integration and unit tests to test the application. I will use the integration tests to test user stories and unit tests to test seperate parts of the code
 
 #### Github Actions:
-For these test to be useful i have added github actions which will test all of the test before being able to push to a branch. This insures bad code not reaching the builds
+For these test to be useful i have added github actions which will test all of the test before being able to push to a branch. This insures bad code not reaching the builds.
+
   ```
     steps:
       - uses: actions/checkout@v2

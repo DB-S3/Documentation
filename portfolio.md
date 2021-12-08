@@ -13,13 +13,18 @@ As my induvidual project for i'm making a Content management system also known a
 ### Architecture:
 Stack: <br/>
   React front-end<br/>
+
   ASP.NET back-end<br/>
   mySQL database<br/>
 
-C4 Model:
-C1:
-C2:
-C3:
+C4 Model:<br/>
+C1:<br/>
+![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/c1.drawio.png?raw=true)<br/>
+C2:<br/>
+![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/c2.drawio.png?raw=true)<br/>
+C3:<br/>
+![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/c3.drawio.png?raw=true)<br/>
+
 
 ## Learning outcomes:
 ### 1. You design and build user-friendly, full-stack web applications.
@@ -65,7 +70,10 @@ To Deploy my application I use docker due to the following reasons.
 * Docker provides an easy way for scaling applications.
 
 To deploy a docker container it runs through the creator mentioned steps (example below)
-1. It imports the neccesarry dependencies to build and
+1. It imports the neccesarry dependencies to build an asp.net application and exposes a port to contact the container.
+2. It restores all of the dependencies of the ASP.NET application.
+3. It then builds the application.
+4. And finally it start the application by running the gateway.dll file.
 ```
 FROM mcr.microsoft.com/dotnet/aspnet:3.1-focal AS base
 WORKDIR /app

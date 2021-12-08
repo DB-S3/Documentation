@@ -12,14 +12,19 @@ As my induvidual project for i'm making a Content management system also known a
 |Website viewer|As a visitor i want to see a website|Given the page exist when the visitor visit the website then show the user created page|5|---|
 ### Architecture:
 Stack: <br/>
-  React front-end<br/>
+  React front-end<br/>![c1 drawio](https://user-images.githubusercontent.com/19876688/145227843-d5a1a03b-608e-4b57-83b0-83588977d0b5.png)
+
   ASP.NET back-end<br/>
   mySQL database<br/>
 
-C4 Model:
-C1:
-C2:
-C3:
+C4 Model:<br/>
+C1:<br/>
+![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/c1.drawio.png?raw=true)<br/>
+C2:<br/>
+![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/c2.drawio.png?raw=true)<br/>
+C3:<br/>
+![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/c3.drawio.png?raw=true)<br/>
+
 
 ## Learning outcomes:
 ### 1. You design and build user-friendly, full-stack web applications.

@@ -1,7 +1,8 @@
 # Portfolio S3
 
 ## Project
-As my induvidual project for i'm making a Content management system also known as a website creator. For this i have the following user stories
+As my induvidual project for i'm making a Content management system also known as a website creator. For this i have made the following user stories
+
 ### User stories
 |Title|User Story|Acceptance criteria|Priority|Estimate|
 |---|---|---|---|---|
@@ -105,18 +106,36 @@ ENTRYPOINT ["dotnet", "Gateway.dll"]
 2. 
 
 #### Github Actions:
+To always have the most update images of application i use github actions to update it after testing it. To do so it follows the following steps
+1. It first checks out to the repository.
+2. Then it logs into docker.
+3. After which it sets up docker buildx to be bale to build the image.
+4. Following that the dockerfile will be used to build the image and push it
+
   ```
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
+steps:
+    
+      - name: Check Out Repo 
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
         with:
-          dotnet-version: 5.0.x
-      - name: Restore dependencies
-        run: dotnet restore
-      - name: Build
-        run: dotnet build --no-restore
-      - name: Test
-        run: dotnet test --no-build --verbosity normal
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: ./Gateway/
+          file: ./Gateway/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/gateway-ortisy:latest
 ```
+
 ### 4. You act in a professional manner during software development and learning.

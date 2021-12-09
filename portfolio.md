@@ -14,7 +14,6 @@ As my induvidual project for i'm making a Content management system also known a
 ### Architecture:
 Stack: <br/>
   React front-end<br/>
-
   ASP.NET back-end<br/>
   mySQL database<br/>
 
@@ -36,7 +35,7 @@ C3:<br/>
   #### Authentication:
   To authenticate user in the application i make use of Auth0. The user makes a call to auth0 and obtain a JWT token which can be used to access content safely on the backend.
   #### Database:
-  For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions.
+  For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework.
   #### User Experience:
   For the user experience i have chosen to use as little clutter pages and keep relevant information on the home page and have clear descriptive labels for elements.
 
@@ -48,8 +47,12 @@ To test my application i will be using integration and unit tests to test the ap
 
 #### Github Actions:
 For these test to be useful i have added github actions which will test all of the test before being able to push to a branch. This insures bad code not reaching the builds.
-
-  ```
+The way it works is:
+1. The action sets up .Net.
+2. After which it will restore the project dependencies.
+3. Following which it'll build the application.
+4. And finally it will run the tests.
+```
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET
@@ -112,7 +115,7 @@ To always have the most update images of application i use github actions to upd
 3. After which it sets up docker buildx to be bale to build the image.
 4. Following that the dockerfile will be used to build the image and push it
 
-  ```
+```
 steps:
     
       - name: Check Out Repo 
@@ -139,3 +142,4 @@ steps:
 ```
 
 ### 4. You act in a professional manner during software development and learning.
+To act in a proffesional manner i apply the feedback given by the stakeholder and i have a jira board to keep track of my progress.

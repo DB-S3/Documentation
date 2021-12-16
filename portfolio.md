@@ -112,7 +112,7 @@ ENTRYPOINT ["dotnet", "Gateway.dll"]
 To always have the most update images of application i use github actions to update it after testing it. To do so it follows the following steps
 1. It first checks out to the repository.
 2. Then it logs into docker.
-3. After which it sets up docker buildx to be bale to build the image.
+3. After which it sets up docker buildx to be able to build the image.
 4. Following that the dockerfile will be used to build the image and push it
 
 ```
@@ -142,4 +142,4 @@ steps:
 ```
 
 ### 4. You act in a professional manner during software development and learning.
-To act in a proffesional manner i apply the feedback given by the stakeholder and i have a jira board to keep track of my progress.
+To act in a proffesional manner I apply the feedback given by the stakeholder and I have a jira board to keep track of my progress and do research into cross site scripting and ... to get a better understanding of these subject by using the dot framework.

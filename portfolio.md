@@ -1,7 +1,7 @@
 # Portfolio S3
 
 ## Project
-As my induvidual project for i'm making a Content management system also known as a website creator. For this i have made the following user stories
+As my individual project for i'm making a Content management system also known as a website creator. For this i have made the following user stories
 
 ### User stories
 |Title|User Story|Acceptance criteria|Priority|Estimate|

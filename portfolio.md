@@ -6,10 +6,10 @@ As my individual project for i'm making a Content management system also known a
 ### User stories
 |Title|User Story|Acceptance criteria|Priority|Estimate|
 |---|---|---|---|---|
-|Login|As a user i want to login so i can access my website creator|Given the user is not logged in when trying to log in then let user login|1|---|
-|Register|As a user i want to be able to register so i can access my website creator|Given the user is not logged in when trying to register then show a register screen|2|---|
-|Page creator|As a user i want to create a page so a visitor can see it|Given the user is logged in when trying to create a page then create a page with the given path|3|---|
-|Page editor|As a user i want to able edit a page so there is content on it|Given the user is logged in when trying to edit content on a page then edit content on said page|4|---|
+|Login|As a Website owner want to login so i can access my website creator|Given the user is not logged in when trying to log in then let user login|1|---|
+|Register|As a Website owner i want to be able to register so i can access my website creator|Given the user is not logged in when trying to register then show a register screen|2|---|
+|Page creator|As a Website owner i want to create a page so a visitor can see it|Given the user is logged in when trying to create a page then create a page with the given path|3|---|
+|Page editor|As a Website owner i want to able edit a page so there is content on it|Given the user is logged in when trying to edit content on a page then edit content on said page|4|---|
 |Website viewer|As a visitor i want to see a website|Given the page exist when the visitor visit the website then show the user created page|5|---|
 ### Architecture:
 Stack: <br/>

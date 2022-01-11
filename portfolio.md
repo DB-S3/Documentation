@@ -33,7 +33,7 @@ C3:<br/>
   #### API gateway:
   I use an API gateway to refer all user requests to one singular access point to access all of the backend services. I decided to use ocelot a C# based api gateway this is due to me wanting to keep the languages used consistent and ocelot having support for kubernetes if i ever wanted to use that technology.
   #### Authentication:
-  To authenticate user in the application i make use of Auth0. The user makes a call to auth0 and obtain a JWT token which can be used to access content safely on the backend.
+  To authenticate user in the application i make use of Auth0. The user makes a call to auth0 to obtain a JWT token which can be used to access content safely on the backend.
   #### Database:
   For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework.
   #### User Experience:
@@ -140,6 +140,16 @@ steps:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/gateway-ortisy:latest
 ```
+#### Hosting:
+To host the application i use azure cloud services and netlify. These automatically get update on a change to the github main branch. These hosting platform are serverless meaning that the application will only run when it needs to. And when more instance are needed it can instantly scale up.
+
 
 ### 4. You act in a professional manner during software development and learning.
-To act in a proffesional manner I apply the feedback given by the stakeholder and I have a jira board to keep track of my progress and do research into cross site scripting and ... to get a better understanding of these subject by using the dot framework.
+#### Research:
+To improve the application i have done research into [Preventing XSS](https://docs.google.com/document/d/1Ls4_uIDSC5wNS0eiVT-1uckycXYdsc4nwiqmcbHl-i8/edit?usp=sharing) and [Hosting applications](https://docs.google.com/document/d/163aB2zqBq98RuplTe3ZwhgiCFhdiocRqtHgH4oYdiNA/edit?usp=sharing). This research was done using the dot framework.
+
+#### Progress:
+To keep track of my progress i used to use jira but switch to github projects to to have the code and the planning in one place.
+
+#### Github branches:
+I'm my project i created branches to work on and then merge them into the project.

@@ -1,6 +1,6 @@
-Deployment research:
+# Deployment research:
 
-
+## Content
 - Foreword
 - Questions:
    - Different ways to deploy an application?
@@ -29,39 +29,39 @@ semester. This research was done using the DOT framework with the following stra
 ## Questions:
 
 
-● How can I best deploy my CMS application?
-   ○ Different methods to deploy an application?
-   ○ Different deployment infrastructures?
-   ○ Best way to deploy a React application?
-   ○ Best way to deploy an ASP.NET application?
+- How can I best deploy my CMS application?
+   - Different methods to deploy an application?
+   - Different deployment infrastructures?
+   - Best way to deploy a React application?
+   - Best way to deploy an ASP.NET application?
 
 
-### Different ways to deploy an application?
+## Different ways to deploy an application?
 
-#### Recreate:
+### Recreate:
 
 First the existing instances will be terminated after which new instances will be created with
 the new update.This is used for applications that can afford down time and don’t have any
 extra resources.
 
-#### Ramped:
+### Ramped:
 
 New instances will slowly be rolled out to replace the old ones.
 
-#### Blue/Green:
+### Blue/Green:
 
 The new instances are created alongside the old ones after which all traffic will be switched
 to the new instances. When this new instance is not stable enough the users can always be
 diverted back to the old instances. This ensure uptime of an application
 
-#### Canary:
+### Canary:
 
 A new instance is created alongside the old ones and traffic is slowly diverted to the new
 instances. This technique is used when the confidence about the stability is low. The
 instances are kept so when the new application doesn’t work as intended the old instance
 can be switched back to.
 
-#### Shadow:
+### Shadow:
 
 With this deployment technique the new instance will be rolled out along the existing one.
 Users will use the old instance but the traffic will also be sent to the new instance to test the
@@ -74,17 +74,17 @@ For the deployment infrastructure I had one criteria: the ability to implement c
 deployment so while there are more options out there a lot of them won’t be able to update
 automatically upon a new version of the application.
 
-#### Virtual machine:
+### Virtual machine:
 
 A virtual machine is a normal computer divided into parts to create multiple servers. This is
 great for small applications. Although the vps’s can have limitations.
 
-#### Dedicated machine:
+### Dedicated machine:
 
 A dedicated machine is an entire machine due to which one has full access to the machine.
 Due to this freedom, dedicated servers are very expensive.
 
-#### Cloud services:
+### Cloud services:
 
 Cloud services people to host applications instead of having to host on servers. This is
 usually split into two categories: Serverless hosting and container hosting. The difference

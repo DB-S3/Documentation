@@ -147,10 +147,10 @@ To host the application i use azure cloud services and netlify. These automatica
 
 ### 4. You act in a professional manner during software development and learning.
 #### Research:
-To improve the application i have done research into [Preventing XSS](https://docs.google.com/document/d/1Ls4_uIDSC5wNS0eiVT-1uckycXYdsc4nwiqmcbHl-i8/edit?usp=sharing) and [Hosting applications](https://docs.google.com/document/d/163aB2zqBq98RuplTe3ZwhgiCFhdiocRqtHgH4oYdiNA/edit?usp=sharing). This research was done using the dot framework.
+To improve the application i have done research into [Preventing XSS](https://github.com/DB-S3/Documentation/blob/main/Research/XSS.md) and [Hosting applications](https://github.com/DB-S3/Documentation/blob/main/Research/Deployment.md). This research was done using the dot framework.
 
 #### Progress:
-To keep track of my progress i used to use jira but switched to github projects to to have the code and the planning in one place and automatic add bug fixes to the board.
+To keep track of my progress i used to use jira but switched to [github projects](https://github.com/orgs/DB-S3/projects/2) to to have the code and the planning in one place and automatic add bug fixes to the board.
 
 #### Github branches:
 I'm my project i created branches to work on and then merge them into the project.

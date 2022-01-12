@@ -1,15 +1,15 @@
 # Portfolio S3
 
 ## Project
-As my induvidual project for i'm making a Content management system also known as a website creator. For this i have made the following user stories
+As my individual project for i'm making a Content management system also known as a website creator. For this i have made the following user stories
 
 ### User stories
 |Title|User Story|Acceptance criteria|Priority|Estimate|
 |---|---|---|---|---|
-|Login|As a user i want to login so i can access my website creator|Given the user is not logged in when trying to log in then let user login|1|---|
-|Register|As a user i want to be able to register so i can access my website creator|Given the user is not logged in when trying to register then show a register screen|2|---|
-|Page creator|As a user i want to create a page so a visitor can see it|Given the user is logged in when trying to create a page then create a page with the given path|3|---|
-|Page editor|As a user i want to able edit a page so there is content on it|Given the user is logged in when trying to edit content on a page then edit content on said page|4|---|
+|Login|As a Website owner want to login so i can access my website creator|Given the user is not logged in when trying to log in then let user login|1|---|
+|Register|As a Website owner i want to be able to register so i can access my website creator|Given the user is not logged in when trying to register then show a register screen|2|---|
+|Page creator|As a Website owner i want to create a page so a visitor can see it|Given the user is logged in when trying to create a page then create a page with the given path|3|---|
+|Page editor|As a Website owner i want to able edit a page so there is content on it|Given the user is logged in when trying to edit content on a page then edit content on said page|4|---|
 |Website viewer|As a visitor i want to see a website|Given the page exist when the visitor visit the website then show the user created page|5|---|
 ### Architecture:
 Stack: <br/>
@@ -33,7 +33,7 @@ C3:<br/>
   #### API gateway:
   I use an API gateway to refer all user requests to one singular access point to access all of the backend services. I decided to use ocelot a C# based api gateway this is due to me wanting to keep the languages used consistent and ocelot having support for kubernetes if i ever wanted to use that technology.
   #### Authentication:
-  To authenticate user in the application i make use of Auth0. The user makes a call to auth0 and obtain a JWT token which can be used to access content safely on the backend.
+  To authenticate user in the application i make use of Auth0. The user makes a call to auth0 to obtain a JWT token which can be used to access content safely on the backend.
   #### Database:
   For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework.
   #### User Experience:
@@ -112,7 +112,7 @@ ENTRYPOINT ["dotnet", "Gateway.dll"]
 To always have the most update images of application i use github actions to update it after testing it. To do so it follows the following steps
 1. It first checks out to the repository.
 2. Then it logs into docker.
-3. After which it sets up docker buildx to be bale to build the image.
+3. After which it sets up docker buildx to be able to build the image.
 4. Following that the dockerfile will be used to build the image and push it
 
 ```
@@ -140,6 +140,16 @@ steps:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/gateway-ortisy:latest
 ```
+#### Hosting:
+To host the application i use azure cloud services and netlify. These automatically get update on a change to the github main branch. These hosting platform are serverless meaning that the application will only run when it needs to. And when more instance are needed it can instantly scale up.
+
 
 ### 4. You act in a professional manner during software development and learning.
-To act in a proffesional manner i apply the feedback given by the stakeholder and i have a jira board to keep track of my progress.
+#### Research:
+To improve the application i have done research into [Preventing XSS](https://docs.google.com/document/d/1Ls4_uIDSC5wNS0eiVT-1uckycXYdsc4nwiqmcbHl-i8/edit?usp=sharing) and [Hosting applications](https://docs.google.com/document/d/163aB2zqBq98RuplTe3ZwhgiCFhdiocRqtHgH4oYdiNA/edit?usp=sharing). This research was done using the dot framework.
+
+#### Progress:
+To keep track of my progress i used to use jira but switched to github projects to to have the code and the planning in one place and automatic add bug fixes to the board.
+
+#### Github branches:
+I'm my project i created branches to work on and then merge them into the project.

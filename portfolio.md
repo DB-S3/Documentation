@@ -29,7 +29,7 @@ C3:<br/>
 ## Learning outcomes:
 ### 1. You design and build user-friendly, full-stack web applications.
   #### Front-end
-  For the user interface i use react due to two way data binding which means that when a UI input changes the state changes and vice versa and the great modularity of react components
+  For the user interface i use a react [Front-End](https://github.com/DB-S3/Front-End) due to two way data binding which means that when a UI input changes the state changes and vice versa and the great modularity of react components
   #### API gateway:
   I use an [Api Gateway](https://github.com/DB-S3/Gateway) to refer all user requests to one singular access point to access all of the backend services. I decided to use ocelot a C# based api gateway this is due to me wanting to keep the languages used consistent and ocelot having support for kubernetes if i ever wanted to use that technology.
   #### Authentication:

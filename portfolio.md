@@ -35,7 +35,9 @@ C3:<br/>
   #### Authentication:
   To authenticate user in the application i make use of Auth0. The user makes a call to auth0 to obtain a JWT token which can be used to access content safely on the backend.
   <br/>
-  ![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/Auth0-login.PNG?raw=true)  ![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/jwt.PNG?raw=true)
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Auth0-login.PNG?raw=true" alt="drawing" height="400"/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/jwt.PNG?raw=true" alt="drawing" height="400"/>
+
   #### Database:
   For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework.
   #### User Experience:

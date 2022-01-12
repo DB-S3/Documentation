@@ -31,7 +31,7 @@ C3:<br/>
   #### Front-end
   For the user interface i use react due to two way data binding which means that when a UI input changes the state changes and vice versa and the great modularity of react components
   #### API gateway:
-  I use an API gateway to refer all user requests to one singular access point to access all of the backend services. I decided to use ocelot a C# based api gateway this is due to me wanting to keep the languages used consistent and ocelot having support for kubernetes if i ever wanted to use that technology.
+  I use an [Api Gateway](https://github.com/DB-S3/Gateway) to refer all user requests to one singular access point to access all of the backend services. I decided to use ocelot a C# based api gateway this is due to me wanting to keep the languages used consistent and ocelot having support for kubernetes if i ever wanted to use that technology.
   #### Authentication:
   To authenticate user in the application i make use of Auth0. The user makes a call to auth0 to obtain a JWT token which can be used to access content safely on the backend.
   <br/>
@@ -50,7 +50,7 @@ C3:<br/>
 To test my application i will be using integration and unit tests to test the application. I will use the integration tests to test user stories and unit tests to test seperate parts of the code
 
 #### Github Actions:
-For these test to be useful i have added github actions which will test all of the test before being able to push to a branch. This insures bad code not reaching the builds.
+For these test to be useful i have added [Github Actions](https://github.com/DB-S3/HTMLService/blob/master/.github/workflows/dotnet.yml) which will test all of the test before being able to push to a branch. This insures bad code not reaching the builds.
 The way it works is:
 1. The action sets up .Net.
 2. After which it will restore the project dependencies.
@@ -83,32 +83,29 @@ To deploy a docker container it runs through the creator mentioned steps (exampl
 3. It then builds the application.
 4. And finally it start the application by running the gateway.dll file.
 ```
-FROM mcr.microsoft.com/dotnet/aspnet:3.1-focal AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
-EXPOSE 7000
+EXPOSE 80
 
-ENV ASPNETCORE_URLS=http://+:7000
-
-# Creates a non-root user with an explicit UID and adds permission to access the /app folder
-# For more info, please refer to https://aka.ms/vscode-docker-dotnet-configure-containers
-RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /app
-USER appuser
-
-FROM mcr.microsoft.com/dotnet/sdk:3.1-focal AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["Gateway.csproj", "./"]
-RUN dotnet restore "Gateway.csproj"
+COPY ["HTMLServer/HTMLServer.csproj", "HTMLServer/"]
+COPY ["Logic/Logic.csproj", "Logic/"]
+COPY ["Factory/Factory.csproj", "Factory/"]
+COPY ["Common/Common.csproj", "Common/"]
+COPY ["DataAccess/DataAccess.csproj", "DataAccess/"]
+RUN dotnet restore "HTMLServer/HTMLServer.csproj"
 COPY . .
-WORKDIR "/src/."
-RUN dotnet build "Gateway.csproj" -c Release -o /app/build
+WORKDIR "/src/HTMLServer"
+RUN dotnet build "HTMLServer.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Gateway.csproj" -c Release -o /app/publish
+RUN dotnet publish "HTMLServer.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Gateway.dll"]
+ENTRYPOINT ["dotnet", "HTMLServer.dll"]
 ```
 2. 
 

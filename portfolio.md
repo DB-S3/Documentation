@@ -23,7 +23,7 @@ C1:<br/>
 C2:<br/>
 ![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/c2.drawio.png?raw=true)<br/>
 C3:<br/>
-![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/c3.drawio.png?raw=true)<br/>
+![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/c3.drawio.PNG?raw=true)<br/>
 
 
 ## Learning outcomes:
@@ -34,7 +34,7 @@ C3:<br/>
   I use an API gateway to refer all user requests to one singular access point to access all of the backend services. I decided to use ocelot a C# based api gateway this is due to me wanting to keep the languages used consistent and ocelot having support for kubernetes if i ever wanted to use that technology.
   #### Authentication:
   To authenticate user in the application i make use of Auth0. The user makes a call to auth0 to obtain a JWT token which can be used to access content safely on the backend.
-  ![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/Auth0-login.png?raw=true)<br/>
+  ![alt text](https://github.com/DB-S3/Documentation/blob/main/Images/Auth0-login.PNG?raw=true)<br/>
   #### Database:
   For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework.
   #### User Experience:

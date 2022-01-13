@@ -154,4 +154,4 @@ To improve the application i have done research into [Preventing XSS](https://gi
 To keep track of my progress i used to use jira but switched to [github projects](https://github.com/orgs/DB-S3/projects/2) to to have the code and the planning in one place and automatic add bug fixes to the board.
 
 #### Github branches:
-I'm my project i created branches to work on and then merge them into the project.
+I'm my project i created branches to work on and then merge them into the project. Pushing to the main branch is impossible and can only be added using a pull request.

@@ -40,7 +40,7 @@ C3:<br/>
   #### Microservices:
   To handle the functionality on the backend i have made micro services to handle small parts of the application functionality to make it more scalable. This can be seen in the [View Website Service](https://github.com/DB-S3/ViewWebsiteService) this service handles the viewing of a user made website.
   #### Database:
-  For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework.
+  For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework due to the big community using entity framework making it easier to find soultions to my problems.
   #### User Experience:
   For the user experience i have chosen to use as little clutter pages and keep relevant information on the home page and have clear descriptive labels for elements. And have made page designs.
   <br/>

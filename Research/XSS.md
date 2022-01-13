@@ -21,10 +21,10 @@ unsafe. This research was done using the DOT framework with the following strate
 ## Research question:
 
 Main question:
-How can cross site scripting be prevented in my react web application?
-● What is cross site scripting?
-● What counter measures can be taken against cross site scripting?
-● Which default prevention techniques does react have built in and?
+How can cross site scripting be prevented in my application?
+- What is cross site scripting?
+- What counter measures can be taken against cross site scripting?
+- Which default prevention techniques does react have built in and?
 
 
 ## What is cross site scripting?
@@ -39,60 +39,39 @@ trustable to execute the script the attacker gains access to sensitive informati
 sessions and cookies and rewrite HTML content.
 
 These attacks can be carried out in 3 ways:
-● Reflected XSS:
-Reflected XSS happens when an injected script is reflected off a web server and sent
-to the client when requesting data from a server depending on user input.
+- Reflected XSS: Reflected XSS happens when an injected script is reflected off a web server and sent to the client when requesting data from a server depending on user input.
 
 
-- Stored XSS:
-Stored XSS are attacks where the script is stored on the server. For instance a
-database, forum or visitor.
+- Stored XSS: Stored XSS are attacks where the script is stored on the server. For instance a database, forum or visitor.
 
-- DOM-Based XSS
-DOM-Based XSS when the attacker is allowed to change the DOM and let a user
-execute code through it.
+- DOM-Based XSS DOM-Based XSS when the attacker is allowed to change the DOM and let a user execute code through it.
 
 
 ## What counter measures can be taken against cross site scripting?
 
 There are many ways to prevent cross site scripting attacks
-● Sanitise and validate input forms: Input forms are the most common form of XSS
-attack due to the user input data, checking the data is especially important when the
-users data is used in html content. This usually means that script tags need to be
-extracted from user data.
+- Sanitise and validate input forms: Input forms are the most common form of XSS attack due to the user input data, checking the data is especially important when the users data is used in html content. This usually means that script tags need to be extracted from user data.
 
 
-- Implement a content security policy: A content security policy defines the sources of
-content that can be used by the website this greatly reduces the risk of inline
-scripting. Think of where images, scripts, css are allowed to come from. This makes
-it harder to inject malicious elements into a website.
+- Implement a content security policy: A content security policy defines the sources of content that can be used by the website this greatly reduces the risk of inline scripting. Think of where images, scripts, css are allowed to come from. This makes it harder to inject malicious elements into a website.
 
-- Web application firewall: web application can detect bots and malicious activity and
-can block the attacker before he’s able to do any damage.
+- Web application firewall: web application can detect bots and malicious activity and can block the attacker before he’s able to do any damage.
 
-- Up to Date: Keep the software used up to date to prevent the attacker using
-vulnerabilities and remove all unused software to further decrease the risk of
-vulnerabilities.
+- Up to Date: Keep the software used up to date to prevent the attacker using vulnerabilities and remove all unused software to further decrease the risk of vulnerabilities.
 
-- Scan code: To decrease the risk of XSS attack tools like acunetix can be used to
-scan whether there are any vulnerabilities in the application. This will let you know
-where to pay extra attention to secure the application.
+- Scan code: To decrease the risk of XSS attack tools like acunetix can be used to scan whether there are any vulnerabilities in the application. This will let you know where to pay extra attention to secure the application.
 
 ## Which default prevention techniques does react have built in?
 
 The react front-end framework has built in protection against XSS under the hood
-- Auto escaping: This means when user input is passed onto a component the input
-will be categorised as a string making it impossible for an attacker to input a script.
-- Inline react won’t allow inline script tags making it harder to store html in the
-database and injecting into the browser.
+- Auto escaping: This means when user input is passed onto a component the input will be categorised as a string making it impossible for an attacker to input a script.
+- Inline react won’t allow inline script tags making it harder to store html in the database and injecting into the browser.
 
 
 ## Conclusion
 
-To prevent cross site scripting in my application the best course of action is to sanitise input
-and sanitise the user created elements coming from the backend.Furthermore using a tool to
-scan for vulnerabilities like acunetix with decrease the risk of leaving a gap in the code for an
-attacker.
+To prevent cross site scripting in my application the best course of action is to sanitise input and sanitise the user created elements coming from the backend on the front-end and sanitise all user input coming in on the backend. Furthermore using a tool to
+scan for vulnerabilities like acunetix with decrease the risk of leaving a gap in the code for an attacker.
 
 
 ## References

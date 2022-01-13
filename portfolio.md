@@ -6,11 +6,11 @@ As my individual project for i'm making a Content management system also known a
 ### User stories
 |Title|User Story|Acceptance criteria|Priority|Estimate|
 |---|---|---|---|---|
-|Login|As a Website owner want to login so i can access my website creator|Given the user is not logged in when trying to log in then let user login|1|---|
-|Register|As a Website owner i want to be able to register so i can access my website creator|Given the user is not logged in when trying to register then show a register screen|2|---|
-|Page creator|As a Website owner i want to create a page so a visitor can see it|Given the user is logged in when trying to create a page then create a page with the given path|3|---|
-|Page editor|As a Website owner i want to able edit a page so there is content on it|Given the user is logged in when trying to edit content on a page then edit content on said page|4|---|
-|Website viewer|As a visitor i want to see a website|Given the page exist when the visitor visit the website then show the user created page|5|---|
+|Login|As a Website owner want to login so i can access my website creator|Given the website owner is not logged in when trying to log in then let user login|1|---|
+|Register|As a Website owner i want to be able to register so i can access my website creator|Given the website owner is not logged in when trying to register then show a register screen|2|---|
+|Page creator|As a Website owner i want to create a page so a visitor can see it|Given the website owner is logged in when trying to create a page then create a page with the given path|3|---|
+|Page editor|As a Website owner i want to able edit a page so there is content on it|Given the website owner is logged in when trying to edit content on a page then edit content on said page|4|---|
+|Website viewer|As a visitor i want to see a website|Given the page exist when the visitor visits the website then show the website owners created page|5|---|
 ### Architecture:
 Stack: <br/>
   React front-end<br/>
@@ -81,11 +81,11 @@ To Deploy my application I use docker due to the following reasons.
 * Docker creates an image due to this the application is deployable on all systems that support docker and variables that may impact compatiblity with a system are nullified.
 * Docker provides an easy way for scaling applications.
 
-To deploy a docker container it runs through the creator mentioned steps (example below)
+To deploy a docker container it runs through the [Dockerfile](https://github.com/DB-S3/HTMLService/blob/master/HTMLServer/Dockerfile) mentioned steps (example below)
 1. It imports the neccesarry dependencies to build an asp.net application and exposes a port to contact the container.
 2. It restores all of the dependencies of the ASP.NET application.
 3. It then builds the application.
-4. And finally it start the application by running the gateway.dll file.
+4. And finally it start the application by running the HTMLServer.dll file.
 ```
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
@@ -147,7 +147,9 @@ steps:
 ```
 #### Hosting:
 To host the application i use azure cloud services and netlify. These automatically get update on a change to the github main branch. These hosting platform are serverless meaning that the application will only run when it needs to. And when more instance are needed it can instantly scale up.
-
+  <br/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Azure.PNG?raw=true" alt="drawing" width="480"/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/netlify.PNG?raw=true" alt="drawing" width="480"/>
 
 ### 4. You act in a professional manner during software development and learning.
 #### Research:

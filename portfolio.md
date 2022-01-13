@@ -43,6 +43,9 @@ C3:<br/>
   For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework.
   #### User Experience:
   For the user experience i have chosen to use as little clutter pages and keep relevant information on the home page and have clear descriptive labels for elements. And have made page designs.
+  <br/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Page-panel.PNG?raw=true" alt="drawing" height="400"/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Website-editor.PNG?raw=true" alt="drawing" height="400"/>
 
   
 

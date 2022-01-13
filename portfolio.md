@@ -37,17 +37,18 @@ C3:<br/>
   <br/>
   <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Auth0-login.PNG?raw=true" alt="drawing" height="400"/>
   <img src="https://github.com/DB-S3/Documentation/blob/main/Images/jwt.PNG?raw=true" alt="drawing" height="400"/>
-
+  #### Microservices:
+  To handle the functionality on the backend i have made micro services to handle small parts of the application functionality to make it more scalable. This can be seen in the [View Website Service](https://github.com/DB-S3/ViewWebsiteService) this service handles the viewing of a user made website.
   #### Database:
   For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework.
   #### User Experience:
-  For the user experience i have chosen to use as little clutter pages and keep relevant information on the home page and have clear descriptive labels for elements.
+  For the user experience i have chosen to use as little clutter pages and keep relevant information on the home page and have clear descriptive labels for elements. And have made page designs.
 
   
 
 ### 2. You use software tooling and methodology that continuously monitors and improve the software quality during software development.
 #### Testing:
-To test my application i will be using integration and unit tests to test the application. I will use the integration tests to test user stories and unit tests to test seperate parts of the code
+To test my application i will be using [Integration tests](https://github.com/DB-S3/ViewWebsiteService/blob/master/Tests/IntegrationTests.cs) I will use the integration tests to test user stories.
 
 #### Github Actions:
 For these test to be useful i have added [Github Actions](https://github.com/DB-S3/HTMLService/blob/master/.github/workflows/dotnet.yml) which will test all of the test before being able to push to a branch. This insures bad code not reaching the builds.

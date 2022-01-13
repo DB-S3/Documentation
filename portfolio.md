@@ -44,14 +44,14 @@ C3:<br/>
   #### User Experience:
   For the user experience i have chosen to use as little clutter pages and keep relevant information on the home page and have clear descriptive labels for elements. And have made page designs.
   <br/>
-  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Page-panel.PNG?raw=true" alt="drawing" height="400"/>
-  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Website-editor.PNG?raw=true" alt="drawing" height="400"/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Page-panel.PNG?raw=true" alt="drawing" width="480"/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Website-editor.PNG?raw=true" alt="drawing" width="480"/>
 
   
 
 ### 2. You use software tooling and methodology that continuously monitors and improve the software quality during software development.
 #### Testing:
-To test my application i will be using [Integration tests](https://github.com/DB-S3/ViewWebsiteService/blob/master/Tests/IntegrationTests.cs) I will use the integration tests to test user stories.
+To test my application i will be using [Integration tests](https://github.com/DB-S3/ViewWebsiteService/blob/master/Tests/IntegrationTests.cs) I will use the integration tests to test user stories. The tests will prove true if the acceptance criteria for the user story is met.
 
 #### Github Actions:
 For these test to be useful i have added [Github Actions](https://github.com/DB-S3/HTMLService/blob/master/.github/workflows/dotnet.yml) which will test all of the test before being able to push to a branch. This insures bad code not reaching the builds.

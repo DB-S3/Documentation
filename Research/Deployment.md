@@ -43,16 +43,22 @@ semester. This research was done using the DOT framework with the following stra
 First the existing instances will be terminated after which new instances will be created with
 the new update.This is used for applications that can afford down time and don’t have any
 extra resources.
+  <br/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/recreate.gif?raw=true" alt="drawing" width="480"/>
 
 ### Ramped:
 
 New instances will slowly be rolled out to replace the old ones.
+  <br/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/ramped.gif?raw=true" alt="drawing" width="480"/>
 
 ### Blue/Green:
 
 The new instances are created alongside the old ones after which all traffic will be switched
 to the new instances. When this new instance is not stable enough the users can always be
 diverted back to the old instances. This ensure uptime of an application
+  <br/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/blue-green.gif?raw=true" alt="drawing" width="480"/>
 
 ### Canary:
 
@@ -60,12 +66,16 @@ A new instance is created alongside the old ones and traffic is slowly diverted 
 instances. This technique is used when the confidence about the stability is low. The
 instances are kept so when the new application doesn’t work as intended the old instance
 can be switched back to.
+  <br/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/canary.gif?raw=true" alt="drawing" width="480"/>
 
 ### Shadow:
 
 With this deployment technique the new instance will be rolled out along the existing one.
 Users will use the old instance but the traffic will also be sent to the new instance to test the
 new code.
+  <br/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/shadow.gif?raw=true" alt="drawing" width="480"/>
 
 
 ## Different deployment infrastructures?

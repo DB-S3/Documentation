@@ -81,11 +81,11 @@ To Deploy my application I use docker due to the following reasons.
 * Docker creates an image due to this the application is deployable on all systems that support docker and variables that may impact compatiblity with a system are nullified.
 * Docker provides an easy way for scaling applications.
 
-To deploy a docker container it runs through the creator mentioned steps (example below)
+To deploy a docker container it runs through the [Dockerfile](https://github.com/DB-S3/HTMLService/blob/master/HTMLServer/Dockerfile) mentioned steps (example below)
 1. It imports the neccesarry dependencies to build an asp.net application and exposes a port to contact the container.
 2. It restores all of the dependencies of the ASP.NET application.
 3. It then builds the application.
-4. And finally it start the application by running the gateway.dll file.
+4. And finally it start the application by running the HTMLServer.dll file.
 ```
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app

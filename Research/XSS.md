@@ -43,11 +43,12 @@ These attacks can be carried out in 3 ways:
    <br/>
   <img src="https://github.com/DB-S3/Documentation/blob/main/Images/xss-reflected.gif?raw=true" alt="drawing" width="350"/>
 
-- Stored XSS: Stored XSS are attacks where the script is stored on the server. For instance a database, forum or visitor.
+- Stored XSS: Stored XSS are attacks where the script is stored on the server. For instance a database, forum or visitor. After which the user will unknowingly execute the script and give control to the attacker.
    <br/>
   <img src="https://github.com/DB-S3/Documentation/blob/main/Images/xss-stored.gif?raw=true" alt="drawing" width="350"/>
 - DOM-Based XSS DOM-Based XSS when the attacker is allowed to change the DOM and let a user execute code through it.
-
+   <br/>
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Dom-based-XSS.jpg?raw=true" alt="drawing" width="350"/>
 
 ## What counter measures can be taken against cross site scripting?
 
@@ -71,9 +72,13 @@ The react front-end framework has built in protection against XSS under the hood
 
 
 ## Conclusion
+To prevent the cross site scripting in the application measures need to be taken on the front-end and the back-end to ensure safety.
 
-To prevent cross site scripting in my application the best course of action is to sanitise input and sanitise the user created elements coming from the backend on the front-end and sanitise all user input coming in on the backend. Furthermore using a tool to
-scan for vulnerabilities like acunetix with decrease the risk of leaving a gap in the code for an attacker.
+Front-end: To prevent it on the front-end the most important countermeasure is sanitizing the input from the user and filter out dangerous inputs, uninstall the unused packages and scan with a tool like acunetix to find vunerabilities in the application more easily. And finally add a content security policy so only the react script can be ran in the browser.
+
+Back-end: To prevent cross site scripting on the back-end all user input needs to be sanitised for safety.
+
+These measures will greatly decrease the risk of cross site scripting. 
 
 
 ## References

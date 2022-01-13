@@ -12,8 +12,8 @@
 
 ## Foreword
 
-The reason why I researched this topic is to secure my front-end better due to my app being
-a content management system which includes a load of user data that can make it very
+The reason why I researched this topic is to secure my application better due to my app being
+a content management system which includes a load of user data which can make it very
 unsafe. This research was done using the DOT framework with the following strategies:
 **Literature study**.
 
@@ -40,10 +40,10 @@ sessions and cookies and rewrite HTML content.
 
 These attacks can be carried out in 3 ways:
 - Reflected XSS: Reflected XSS happens when an injected script is reflected off a web server and sent to the client when requesting data from a server depending on user input.
-
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/xss-reflected.gif?raw=true" alt="drawing" width="350"/>
 
 - Stored XSS: Stored XSS are attacks where the script is stored on the server. For instance a database, forum or visitor.
-
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/xss-stored.gif?raw=true" alt="drawing" width="350"/>
 - DOM-Based XSS DOM-Based XSS when the attacker is allowed to change the DOM and let a user execute code through it.
 
 

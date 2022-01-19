@@ -14,8 +14,7 @@
 
 The reason why I researched this topic is to secure my application better due to my app being
 a content management system which includes a load of user data which can make it very
-unsafe. This research was done using the DOT framework with the following strategies:
-**Literature study**.
+unsafe. The research strategy I used was Library Research. The research method from the framework I use is Literature study. I used this method because there are a lot of good online sources for information. I can use these sources to conduct my research.
 
 
 ## Research question:

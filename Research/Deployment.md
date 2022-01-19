@@ -22,8 +22,7 @@
 ## Foreword
 
 The reason I've researched this topic is to be able to deploy the application I've made this
-semester. This research was done using the DOT framework with the following strategies:
-**Literature study** , **A/B testing**.
+semester. The research strategy I used were Library Research and Lab studies. The research method from the framework I use are Literature study and A/B testing. I used these method because there are a lot of good online sources for information. We can use these sources to conduct our research. And to determine which is best for I tried them out and compared them.
 
 
 ## Questions:

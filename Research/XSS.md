@@ -14,8 +14,7 @@
 
 The reason why I researched this topic is to secure my application better due to my app being
 a content management system which includes a load of user data which can make it very
-unsafe. This research was done using the DOT framework with the following strategies:
-**Literature study**.
+unsafe. The research strategy I used was Library Research. The research method from the framework I use is Literature study. I used this method because there are a lot of good online sources for information. I can use these sources to conduct my research.
 
 
 ## Research question:
@@ -24,7 +23,7 @@ Main question:
 How can cross site scripting be prevented in my application?
 - What is cross site scripting?
 - What counter measures can be taken against cross site scripting?
-- Which default prevention techniques does react have built in and?
+- Which default prevention techniques does react have built?
 
 
 ## What is cross site scripting?
@@ -55,7 +54,6 @@ These attacks can be carried out in 3 ways:
 There are many ways to prevent cross site scripting attacks
 - Sanitise and validate input forms: Input forms are the most common form of XSS attack due to the user input data, checking the data is especially important when the users data is used in html content. This usually means that script tags need to be extracted from user data.
 
-
 - Implement a content security policy: A content security policy defines the sources of content that can be used by the website this greatly reduces the risk of inline scripting. Think of where images, scripts, css are allowed to come from. This makes it harder to inject malicious elements into a website.
 
 - Web application firewall: web application can detect bots and malicious activity and can block the attacker before he’s able to do any damage.
@@ -67,7 +65,7 @@ There are many ways to prevent cross site scripting attacks
 ## Which default prevention techniques does react have built in?
 
 The react front-end framework has built in protection against XSS under the hood
-- Auto escaping: This means when user input is passed onto a component the input will be categorised as a string making it impossible for an attacker to input a script.
+- Auto escaping: This means when user input is passed onto a component the input will be categorised as a string making it impossible for an attacker to input a script. 
 - Inline react won’t allow inline script tags making it harder to store html in the database and injecting into the browser.
 
 

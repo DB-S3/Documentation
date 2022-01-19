@@ -40,9 +40,9 @@ C3:<br/>
   #### Microservices:
   To handle the functionality on the backend i have made micro services to handle small parts of the application functionality to make it more scalable. This can be seen in the [View Website Service](https://github.com/DB-S3/ViewWebsiteService) this service handles the viewing of a user made website.
   #### Database:
-  For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework.
+  For storing my data i use a SQL database the reason why i chose a SQL database instead of a noSQL database due to SQL databases having relations and multirow transactions. To access the database i'm using the ORM entity framework due to the big community using entity framework making it easier to find soultions to my problems.
   #### User Experience:
-  For the user experience i have chosen to use as little clutter pages and keep relevant information on the home page and have clear descriptive labels for elements. And have made page designs.
+  For the user experience i have chosen to use as little clutter pages and keep relevant information on the home page and have clear descriptive labels for elements. And have made page designs. Furthermore i have done a UX research to test the front-end for the group project.
   <br/>
   <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Page-panel.PNG?raw=true" alt="drawing" width="480"/>
   <img src="https://github.com/DB-S3/Documentation/blob/main/Images/Website-editor.PNG?raw=true" alt="drawing" width="480"/>
@@ -111,7 +111,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "HTMLServer.dll"]
 ```
-2. 
+
 
 #### Github Actions:
 To always have the most update images of application i use github actions to update it after testing it. To do so it follows the following steps
@@ -159,4 +159,6 @@ To improve the application i have done research into [Preventing XSS](https://gi
 To keep track of my progress i used to use jira but switched to [github projects](https://github.com/orgs/DB-S3/projects/2) to to have the code and the planning in one place and automatic add bug fixes to the board.
 
 #### Github branches:
-I'm my project i created branches to work on and then merge them into the project. Pushing to the main branch is impossible and can only be added using a pull request.
+I'm my project i've a master, a development and a feature branch. when making a feature a project member will make a new branch and when they're done they merge it into the development branch to test it and after it they can push it to the main branch to get deployed.
+  <img src="https://github.com/DB-S3/Documentation/blob/main/Images/dddd.drawio.png" alt="drawing" width="480"/>
+
